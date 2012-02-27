@@ -14,10 +14,7 @@ group :assets do
   gem 'uglifier'
   gem 'spine-rails'
   gem 'eco'
+  gem 'bootstrap-sass', '~> 2.0.1'
 end
 
 gem 'jquery-rails'
-
-group :production do
-  gem 'pg'
-end
