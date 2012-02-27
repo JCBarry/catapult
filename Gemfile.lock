@@ -148,6 +148,7 @@ DEPENDENCIES
   coffee-rails
   eco
   jquery-rails
+  multi_json
   mysql2
   omniauth-tradeking
   rails (= 3.2.1)

@@ -7,6 +7,7 @@ gem 'mysql2'
 gem 'thin'
 
 gem 'omniauth-tradeking'
+gem 'multi_json'
 
 group :assets do
   gem 'sass-rails'
