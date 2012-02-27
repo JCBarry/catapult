@@ -2,6 +2,8 @@ Catapult::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
 
+  match "/balances" => "balances#index", :as => :balances
+
   resources :posts
   resources :pages
 
