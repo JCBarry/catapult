@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <% @balances['accountbalance'].each do |balance| %>
+        <% [@balances['accountbalance']].flatten.each do |balance| %>
             <tr>
                 <td><%= balance['account'] %></td>
                 <td><%= balance['accountname'] %></td>
