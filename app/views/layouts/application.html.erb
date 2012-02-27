@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catapult: Bulk Order Entry</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container" style="width: auto;">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Catapult</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">About</a></li>
+              <li><a href="#">Balances</a></li>
+              <li><a href="#">Trade</a></li>
+            </ul>
+
+            <% if current_user %>
+              <ul class="nav pull-right">
+                <li>Welcome <%= current_user.name %></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.username %> <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            <% else %>
+              <ul class="nav pull-right">
+                <li><%= link_to "Sign in to TradeKing", "/auth/tradeking" %></li>
+              </ul>
+            <% end %>
+
+
+          </div><!-- /.nav-collapse -->
+        </div>
+      </div><!-- /navbar-inner -->
+    </div>
+    <div class="row">
+      <div class="span12">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
