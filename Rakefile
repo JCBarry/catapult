@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SpineRails3::Application.load_tasks
+Catapult::Application.load_tasks
